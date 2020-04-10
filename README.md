@@ -27,8 +27,7 @@ A brief explanation for this: if the input is truly random its mean value over a
 it is summed with a very small radio signal from a distant transmitter and this is enough to slightly influence the output.
 https://en.wikipedia.org/wiki/Oversampling
 
-CIC filter decimation is 4096 so the theoretical increase in resolution is sqrt(4096) -> 64 bit.
-Real world receiver dynamic is much less, there are many pitfalls not accounted for.
+CIC filter decimation is 4096 so the theoretical increase in resolution of the ADC is 6 bit.
 
 It would be better to have a lower CIC decimation followed by a FIR filter. It can be done, not all of the FPGA is used.
 There is no IP for it from Lattice, MachXO2 lacks DSP blocks and was never intendeded for it.
